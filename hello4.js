@@ -80,7 +80,7 @@ $(document).ready(function() {
 					console.log("Review:  "+sumre/countre);
 				}).then(function(){
 				for(i=0; i<10; i++){
-				if(typeof ratinglist[i] !== "undefined"){
+				if(typeof name[i] !== "undefined"){
 					if(!done.includes(i)){
             			newcontent += "<tr class='table-info'>";
 				//content += "<p>" + data1[1][i] + "</p>";
