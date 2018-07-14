@@ -9,7 +9,7 @@ $(document).ready(function() {
     $("button").click(function(){
     	var url1 =$("input:text").val()
      	$.ajax({
-			url: "http://completion.amazon.com/search/complete",
+			url: "https://completion.amazon.com/search/complete",
 		        dataType: "jsonp",
 		        data: {
 		        q: url1,
