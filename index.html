@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="hello4.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<div class="container">
+<div><h2>AMZN Suggestion Tool</h2></div><br>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search hidden-xs hidden-sm"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row --><br>
+<h2>Choose Country</h2>
+    <p>The image is a link. You can click on it.</p>
+
+    <a href="usaautocomplete.html">
+      <img src="usa.png" alt="USA" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="ausautocomplete.html">
+      <img src="aus.jpg" alt="AUS" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="brazilautocomplete.html">
+      <img src="brazil.jpg" alt="BRAZIL" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="canadaautocomplete.html">
+      <img src="canada.jpeg" alt="CANADA" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="chinaautocomplete.html">
+      <img src="china.png" alt="CHINA" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="franceautocomplete.html">
+      <img src="france.png" alt="FRANCE" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="germanyautocomplete.html">
+      <img src="germany.jpg" alt="GERMANY" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="indiaautocomplete.html">
+      <img src="https://thumb.ibb.co/f5cZz8/india.jpg" alt="INDIA" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="italyautocomplete.html">
+      <img src="italy.jpg" alt="ITALY" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="japanautocomplete.html">
+      <img src="japan.jpeg" alt="JAPAN" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="mexicoautocomplete.html">
+      <img src="mexico.png" alt="MEXICO" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="netherlandsautocomplete.html">
+      <img src="netherlands.jpeg" alt="NETHERLANDS" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="singaporeautocomplete.html">
+      <img src="singapore.jpeg" alt="SINGAPORE" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="spainautocomplete.html">
+      <img src="spain.png" alt="SPAIN" style="width:42px;height:42px;border:0;">
+    </a>
+    <a href="ukautocomplete.html">
+      <img src="uk.jpeg" alt="UK" style="width:42px;height:42px;border:0;">
+    </a>
+<br><br>
+<div id="here"><p id="here_table1"><p></div>
+<div>
+				<table class="table table-striped table-responsive w-auto">
+					<thead>
+  						<tr>
+    							<th>Keyword</th>
+    							<th>Avg. Price</th> 
+    							<th>Avg. Rating</th>
+    							<th>Avg. Review</th>
+  						</tr>
+					</thead>
+					<tbody id="suggested_Result_box">
+					</tbody>
+				</table>
+			</div>		
+</div>
+</body>
+</html>
