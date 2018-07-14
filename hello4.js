@@ -3,11 +3,19 @@ $(document).ready(function() {
 			var pricelist=[];
 			var ratinglist=[];
 			var reviewlist=[];
-			var name=[]
-			var done=[]
+			var name=[];
+			var done=[];
 			var success = 0;
     $("button").click(function(){
+        document.getElementById("suggested_Result_box").innerHTML = "";
     	var url1 =$("input:text").val()
+			newcontent = "";
+			pricelist=[];
+			ratinglist=[];
+			reviewlist=[];
+			name=[];
+			done=[];
+        
      	$.ajax({
 			url: "https://completion.amazon.com/search/complete",
 		        dataType: "jsonp",
@@ -19,6 +27,7 @@ $(document).ready(function() {
 				},
     	}).then(function(data1) {
 			var content = "<div>";
+                        var nop = 1;
 			//var newcontent = "";
 			//var pricelist=[];
 			//var ratinglist=[];
@@ -26,8 +35,12 @@ $(document).ready(function() {
 			var url12 = "https://cors-anywhere.herokuapp.com/https://www.amazon.fr/s/ref=nb_sb_noss_1?url=search-alias%3Ddigital-text&field-keywords="
 			for(i=0; i<10; i++){
 				if(i>5)
-					success=1;				
+					success=1;
+				console.log(typeof data1[1][i]);
+                                if(typeof data1[1][i] == "undefined")
+					continue;				
 				url2 = url12 + data1[1][i];
+				nop += 1;
 				name.push(data1[1][i]);
 				$.get(url2, function(response) {
 					var patt=/sx-price-whole">/g;
@@ -79,8 +92,8 @@ $(document).ready(function() {
 					reviewlist.push((sumre/countre).toFixed(0));
 					console.log("Review:  "+sumre/countre);
 				}).then(function(){
-				for(i=0; i<10; i++){
-				if(typeof name[i] !== "undefined"){
+				for(i=0; i<nop; i++){
+				if(typeof reviewlist[i] !== "undefined"){
 					if(!done.includes(i)){
             			newcontent += "<tr class='table-info'>";
 				//content += "<p>" + data1[1][i] + "</p>";
