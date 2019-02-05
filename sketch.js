@@ -10,6 +10,7 @@ function gotData(data){
   weather=data;
 }
 function draw() {
+  background(0);
   if(weather){
     ellipse(50,50,weather.data.temp, weather.data.temp);
     ellipse(50,50,weather.data.humidity, weather.data.humidity);
